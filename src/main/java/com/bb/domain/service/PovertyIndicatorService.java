@@ -18,7 +18,7 @@ public class PovertyIndicatorService {
     public List<PovertyIndicatorResponseDto> getPovertyIndicator(String country) {
         try {
             return client.getPovertyIndicator("json", country).toPovertyIndicator();
-        } catch(Throwable e) {
+        } catch(Exception e) {
             throw new RuntimeErrorException(null, e.getMessage());
         }
     }

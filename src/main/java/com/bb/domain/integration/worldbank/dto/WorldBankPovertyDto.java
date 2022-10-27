@@ -43,7 +43,8 @@ public class WorldBankPovertyDto {
     public static class SourceInfo {
         private Integer page;
         private Integer pages;
-        private Integer per_page;
+        @JsonProperty("per_page")
+        private Integer perPage;
         private Integer total;
         private String sourceid;
         private String sourcename;
@@ -88,13 +89,13 @@ public class WorldBankPovertyDto {
     public List<PovertyIndicatorResponseDto> toPovertyIndicator() {
         AtomicInteger id = new AtomicInteger();
 
-        return Arrays.stream(this.metrics).map(metric -> { 
-            return PovertyIndicatorResponseDto.builder()
+        return Arrays.stream(this.metrics).map(metric -> 
+            PovertyIndicatorResponseDto.builder()
                 .country(metric.getCountry().getValue())
                 .index(metric.getValue())
                 .year(metric.getDate())
                 .id(id.incrementAndGet())
-                .build();
-        }).toList();
+                .build()
+        ).toList();
     }
 }

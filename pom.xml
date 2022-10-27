@@ -15,6 +15,17 @@
     <quarkus.platform.version>2.13.3.Final</quarkus.platform.version>
     <skipITs>true</skipITs>
     <surefire-plugin.version>3.0.0-M7</surefire-plugin.version>
+    <sonar.coverage.exclusions>**/dto/**,**\*Exception.java,**/config/**</sonar.coverage.exclusions>
+    <sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/jacoco-reports/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+    <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
+    <sonar.host.url>http://localhost:9000</sonar.host.url>
+    <sonar.jacoco.reportsPaths>${project.build.directory}/jacoco.exec</sonar.jacoco.reportsPaths>
+    <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
+    <sonar.organization>bb</sonar.organization>
+    <sonar.projectKey>poverty-indicator</sonar.projectKey>
+    <sonar.projectName>poverty-indicator</sonar.projectName>
+    <sonar.projectVersion>1.0.0</sonar.projectVersion>
+    <sonar.sourceEncoding>UTF-8</sonar.sourceEncoding>
   </properties>
   <dependencyManagement>
     <dependencies>

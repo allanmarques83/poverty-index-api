@@ -21,7 +21,7 @@ import com.bb.domain.service.dto.CountriesResponseDto;
 
 @Path("/countries")
 @ApplicationScoped
-public class CountryController {
+public class CountriesController {
     @Inject CountriesService service;
 
     @GET

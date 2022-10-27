@@ -14,7 +14,7 @@ import io.restassured.RestAssured;
 @QuarkusTestResource(TestResource.class)
 class CountryControllerTest {
     @Test
-    @DisplayName("must return poverty indicator by country")
+    @DisplayName("must return countries")
     void shouldReturnPovertyIndicator() {
         RestAssured.given()
             .header("Content-type", "application/json")
