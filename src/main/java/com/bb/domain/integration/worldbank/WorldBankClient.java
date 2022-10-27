@@ -12,7 +12,7 @@ import javax.ws.rs.core.MediaType;
 
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
-import com.bb.domain.integration.worldbank.dto.Countries;
+import com.bb.domain.integration.worldbank.dto.WorldBankCountriesDto;
 import com.bb.domain.integration.worldbank.dto.WorldBankPovertyDto;
 
 @Singleton
@@ -31,5 +31,5 @@ public interface WorldBankClient {
     @Path("v2/country")
     @Consumes(MediaType.APPLICATION_XML)
     @Produces(MediaType.APPLICATION_JSON)
-    Countries getCountry();
+    WorldBankCountriesDto getCountry();
 }

@@ -23,8 +23,7 @@ public class TestResource implements QuarkusTestResourceLifecycleManager {
         createBadRequestRestResponse();
 
         final Map<String, String> configuration = new HashMap<>();
-        // configuration.put("quarkus.rest-client.worldbank.url", wireMockServer.baseUrl());
-        configuration.put("quarkus.rest-client.worldbank.url", "http://api.worldbank.org");
+        configuration.put("quarkus.rest-client.worldbank.url", wireMockServer.baseUrl());
 
         return configuration;
     }
@@ -70,6 +69,16 @@ public class TestResource implements QuarkusTestResourceLifecycleManager {
                           } ] ]
                     """
                     )
+            )
+        );
+
+        wireMockServer.stubFor(
+            get(
+                urlEqualTo("/v2/country")
+            ).willReturn(
+                aResponse()
+                    .withStatus(200)
+                    .withHeader("Content-Type", "text/xml")
             )
         );
     }

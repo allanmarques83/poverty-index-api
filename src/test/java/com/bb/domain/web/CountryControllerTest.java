@@ -1,5 +1,6 @@
 package com.bb.domain.web;
 
+import org.hamcrest.Matchers;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -20,7 +21,9 @@ class CountryControllerTest {
             .when()
             .get("/countries")
             .then()
-            .statusCode(400)
+            .statusCode(200)
+            .body("[0].country", Matchers.is("Aruba"))
+            .body("[0].code", Matchers.is("ABW"))
             .extract()
             .response()
             .prettyPrint();

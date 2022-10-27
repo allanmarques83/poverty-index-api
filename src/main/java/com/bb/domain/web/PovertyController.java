@@ -16,6 +16,7 @@ import org.eclipse.microprofile.openapi.annotations.responses.APIResponse;
 import org.eclipse.microprofile.openapi.annotations.responses.APIResponses;
 import org.jboss.resteasy.annotations.jaxrs.PathParam;
 
+import com.bb.domain.exception.dto.ApiExceptionDto;
 import com.bb.domain.service.PovertyIndicatorService;
 import com.bb.domain.service.dto.PovertyIndicatorResponseDto;
 
@@ -32,7 +33,11 @@ public class PovertyController {
     @APIResponses(value = {
         @APIResponse(responseCode = "200", description = "OK", content = @Content(
             mediaType = "application/json", schema = @Schema(implementation = PovertyIndicatorResponseDto[].class)
-        ))})
+        )),
+        @APIResponse(responseCode = "400", description = "Bad Request", content = @Content(
+            mediaType = "application/json", schema = @Schema(implementation = ApiExceptionDto.class)
+        ))
+    })
     public Response getByCountry(@PathParam String country) {
         return Response.ok(service.getPovertyIndicator(country)).build();
     }

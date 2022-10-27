@@ -57,22 +57,10 @@
       <artifactId>quarkus-resteasy-jaxb</artifactId>
     </dependency>
     <dependency>
-	<groupId>org.jboss.resteasy</groupId>
-	<artifactId>resteasy-jettison-provider</artifactId>
-	<version>3.1.1.Final</version>
-</dependency>
-<!-- Thanks for using https://jar-download.com -->
-
-    <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <version>1.18.22</version>
       <optional>true</optional>
-    </dependency>
-    <dependency>
-        <groupId>org.json</groupId>
-        <artifactId>json</artifactId>
-        <version>20210307</version>
     </dependency>
     <dependency>
       <groupId>com.google.code.gson</groupId>
