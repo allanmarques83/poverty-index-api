@@ -1,0 +1,4 @@
+/mnt/barracuda/bb/poverty-indicator/src/test/java/com/bb/config/TestResource.java
+/mnt/barracuda/bb/poverty-indicator/src/test/java/com/bb/domain/web/PovertyControllerTest.java
+/mnt/barracuda/bb/poverty-indicator/src/test/java/com/bb/config/InjectMockServer.java
+/mnt/barracuda/bb/poverty-indicator/src/test/java/com/bb/domain/web/CountryControllerTest.java

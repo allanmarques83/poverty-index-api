@@ -1,0 +1,13 @@
+/mnt/barracuda/bb/poverty-indicator/src/main/java/com/bb/domain/integration/worldbank/WorldBankClient.java
+/mnt/barracuda/bb/poverty-indicator/src/main/java/com/bb/domain/exception/HandlerControllerException.java
+/mnt/barracuda/bb/poverty-indicator/src/main/java/com/bb/domain/integration/worldbank/WorldBankException.java
+/mnt/barracuda/bb/poverty-indicator/src/main/java/com/bb/domain/service/PovertyIndicatorService.java
+/mnt/barracuda/bb/poverty-indicator/src/main/java/com/bb/domain/service/dto/PovertyIndicatorResponseDto.java
+/mnt/barracuda/bb/poverty-indicator/src/main/java/com/bb/domain/service/dto/CountriesResponseDto.java
+/mnt/barracuda/bb/poverty-indicator/src/main/java/com/bb/config/Swagger.java
+/mnt/barracuda/bb/poverty-indicator/src/main/java/com/bb/domain/service/CountriesService.java
+/mnt/barracuda/bb/poverty-indicator/src/main/java/com/bb/domain/web/CountriesController.java
+/mnt/barracuda/bb/poverty-indicator/src/main/java/com/bb/domain/exception/dto/ApiExceptionDto.java
+/mnt/barracuda/bb/poverty-indicator/src/main/java/com/bb/domain/integration/worldbank/dto/WorldBankPovertyDto.java
+/mnt/barracuda/bb/poverty-indicator/src/main/java/com/bb/domain/web/PovertyController.java
+/mnt/barracuda/bb/poverty-indicator/src/main/java/com/bb/domain/integration/worldbank/dto/WorldBankCountriesDto.java

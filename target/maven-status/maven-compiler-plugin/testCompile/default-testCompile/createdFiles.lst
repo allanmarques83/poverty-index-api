@@ -1,0 +1,4 @@
+com/bb/domain/web/PovertyControllerTest.class
+com/bb/domain/web/CountryControllerTest.class
+com/bb/config/InjectMockServer.class
+com/bb/config/TestResource.class

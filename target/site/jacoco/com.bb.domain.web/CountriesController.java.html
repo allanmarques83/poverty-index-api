@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CountriesController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">poverty-indicator</a> &gt; <a href="index.source.html" class="el_package">com.bb.domain.web</a> &gt; <span class="el_source">CountriesController.java</span></div><h1>CountriesController.java</h1><pre class="source lang-java linenums">package com.bb.domain.web;
+
+import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+
+import org.eclipse.microprofile.openapi.annotations.Operation;
+import org.eclipse.microprofile.openapi.annotations.responses.APIResponses;
+import org.eclipse.microprofile.openapi.annotations.responses.APIResponse;
+import org.eclipse.microprofile.openapi.annotations.media.Content;
+import org.eclipse.microprofile.openapi.annotations.media.Schema;
+
+import com.bb.domain.exception.dto.ApiExceptionDto;
+import com.bb.domain.service.CountriesService;
+import com.bb.domain.service.dto.CountriesResponseDto;
+
+@Path(&quot;/countries&quot;)
+@ApplicationScoped
+<span class="fc" id="L24">public class CountriesController {</span>
+    @Inject CountriesService service;
+
+    @GET
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    @Operation(summary = &quot;Get a list of available countries for consult poverty indicator&quot;)
+    @APIResponses(value = {
+        @APIResponse(responseCode = &quot;200&quot;, description = &quot;OK&quot;, content = @Content(
+            mediaType = &quot;application/json&quot;, schema = @Schema(implementation = CountriesResponseDto[].class)
+        )),
+        @APIResponse(responseCode = &quot;400&quot;, description = &quot;Bad Request&quot;, content = @Content(
+            mediaType = &quot;application/json&quot;, schema = @Schema(implementation = ApiExceptionDto.class)
+        ))
+    })
+    public Response getCountries() {
+<span class="fc" id="L40">        return Response.ok(service.getCountries()).build();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
