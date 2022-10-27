@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<wb:countries page="1" pages="6" per_page="50" total="299" xmlns:wb="http://www.worldbank.org">
-    <wb:country id="ABW">
-        <wb:iso2Code>AW</wb:iso2Code>
-        <wb:name>Aruba</wb:name>
-    </wb:country>
-</wb:countries>
